@@ -7,19 +7,46 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
+    private lazy var questionsRef: DatabaseReference = {
+        return Database.database().reference().child("questions")
+    }()
+    
+    private lazy var answersRef: DatabaseReference = {
+        return Database.database().reference().child("answers")
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        fetchJSONs()
+    }
+    
+    private func fetchJSONs() {
+        questionsRef.observe(.value) { (snap) in
+            print(snap)
+        }
+        
+        answersRef.observe(.value) { (snap) in
+            print(snap)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: "answer", message: "answer", preferredStyle: .alert)
+        alert.addTextField { (_) in }
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
+            self.save(answer: alert.textFields?.first?.text)
+        }
+        alert.addAction(saveAction)
+        present(alert, animated: true, completion: nil)
     }
-
-
+    
+    private func save(answer: String?) {
+        guard let text = answer else { return }
+        answersRef.childByAutoId().setValue(text)
+    }
 }
 
