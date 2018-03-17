@@ -12,6 +12,7 @@
 		35CDF603205D5E18003B2C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CDF601205D5E18003B2C45 /* Main.storyboard */; };
 		35CDF605205D5E18003B2C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35CDF604205D5E18003B2C45 /* Assets.xcassets */; };
 		35CDF608205D5E18003B2C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35CDF606205D5E18003B2C45 /* LaunchScreen.storyboard */; };
+		35CDF610205D5F45003B2C45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35CDF60F205D5F45003B2C45 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		35CDF604205D5E18003B2C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35CDF607205D5E18003B2C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35CDF609205D5E18003B2C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35CDF60F205D5F45003B2C45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		35CDF5FC205D5E18003B2C45 /* FirebaseTest */ = {
 			isa = PBXGroup;
 			children = (
+				35CDF60F205D5F45003B2C45 /* GoogleService-Info.plist */,
 				35CDF5FD205D5E18003B2C45 /* AppDelegate.swift */,
 				35CDF5FF205D5E18003B2C45 /* ViewController.swift */,
 				35CDF601205D5E18003B2C45 /* Main.storyboard */,
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CDF608205D5E18003B2C45 /* LaunchScreen.storyboard in Resources */,
+				35CDF610205D5F45003B2C45 /* GoogleService-Info.plist in Resources */,
 				35CDF605205D5E18003B2C45 /* Assets.xcassets in Resources */,
 				35CDF603205D5E18003B2C45 /* Main.storyboard in Resources */,
 			);
